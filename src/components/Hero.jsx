@@ -37,7 +37,10 @@ export default function Hero() {
             <div className="flex justify-center gap-4 mt-8">
                 <button
                     onClick={() => {
-                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                        const section = document.getElementById("contact");
+                        if (section) {
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }
                     }}
                     className="bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 transition font-pop"
                 >

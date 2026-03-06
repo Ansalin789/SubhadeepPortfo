@@ -1,23 +1,22 @@
+import React, { forwardRef } from "react";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
 
-export default function ContactSection() {
+const Contact = forwardRef((props, ref) => {
   return (
-    <section id="contact" className="mt-24 bg-[#191919] py-16 px-6">
+    <section ref={ref} id="contact" className="mt-24 bg-[#191919] py-16 px-6">
       <div className="max-w-5xl mx-auto text-white">
         <h2 className="text-xl font-semibold mb-6 font-pop">Contact</h2>
 
-        {/* Email */}
         <div className="flex items-center gap-3 text-gray-300 mb-6">
-          <FaEnvelope className="text-gray-400" />
+          <FaEnvelope />
           <a
             href="mailto:subhadeep.n3@gmail.com"
-            className="hover:text-white transition font-pop"
+            className="hover:text-white transition"
           >
             subhadeep.n3@gmail.com
           </a>
         </div>
 
-        {/* LinkedIn */}
         <a
           href="https://linkedin.com"
           target="_blank"
@@ -29,4 +28,6 @@ export default function ContactSection() {
       </div>
     </section>
   );
-}
+});
+
+export default Contact;

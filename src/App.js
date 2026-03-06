@@ -1,5 +1,6 @@
 import React from "react";
-import './App.css';
+import { useRef } from "react";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ExperienceLogos from "./components/ExperienceLogos";
@@ -8,11 +9,14 @@ import ExperienceSection from "./components/ExperienceSection";
 import Contact from "./components/Contact";
 
 function App() {
+    const contactRef = useRef(null);
+
   return (
     <div className="min-h-screen bg-[#161513] text-white">
       <div className="p-2 rounded-xl">
         <Navbar />
-      </div>      <Hero />
+      </div>{" "}
+      <Hero contactRef={contactRef}/>
       <ExperienceLogos />
       <Projects />
       <ExperienceSection />
